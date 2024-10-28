@@ -7,34 +7,35 @@
     <title>Raiqa's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
-
         body {
-            background-color: #f7f3f8; 
-            color: #4a4a4a; 
-            font-family: 'Arial', sans-serif; 
+            background-color: #fff9e6; /* Kuning pastel */
+            color: #4a4a4a;
+            font-family: 'Arial', sans-serif;
         }
 
         .navbar {
-            background-color: #e6b0e9;
+            background-color: #fce58b; /* Kuning pastel lebih cerah */
         }
 
         .navbar-brand,
         .nav-link {
-            color: #4a4a4a;
+            color: #6a0dad; /* Warna teks ungu */
         }
 
         .navbar-brand:hover,
         .nav-link:hover {
-            color: #6a0dad; 
+            color: #4a4a4a; /* Warna teks saat hover */
         }
 
         .card {
-            background-color: #fff; 
-            border: 1px solid #e2d9e6; 
-            border-radius: 15px; 
-            transition: transform 0.3s; 
+            background-color: #ffffff;
+            border: 1px dashed #e2d9e6;
+            border-radius: 15px;
+            transition: transform 0.3s;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .card:hover {
@@ -46,18 +47,18 @@
         }
 
         .btn-outline-primary {
-            color: #6a0dad; 
-            border-color: #6a0dad; 
+            color: #6a0dad;
+            border-color: #6a0dad;
         }
 
         .btn-outline-primary:hover {
-            background-color: #6a0dad; 
-            color: white; 
+            background-color: #6a0dad;
+            color: white;
         }
 
         img {
             border-radius: 10px;
-            transition: transform 0.3s; 
+            transition: transform 0.3s;
         }
 
         img:hover {
@@ -65,19 +66,82 @@
         }
 
         footer {
-            background-color: #e6b0e9; 
-            padding: 20px;
+            background-color: #f9c4e8; /* Pink pastel */
+            padding: 15px;
             text-align: center;
+            border-top: 2px solid #6a0dad;
+            font-size: 0.8rem;
         }
 
         .social-icons a {
-            color: #6a0dad; 
+            color: #6a0dad;
             margin: 0 10px;
             transition: color 0.3s;
+            font-size: 1.5rem;
         }
 
         .social-icons a:hover {
-            color: #4a4a4a; 
+            color: #4a4a4a;
+        }
+
+        h1 {
+            font-family: 'Permanent Marker';
+            margin-bottom: 20px;
+            color: #6a0dad;
+        }
+        h5 {
+          font-weight: bold;
+        }
+        .fun-facts ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .fun-facts li {
+            background-color: #fce58b;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .about-section {
+            background-color: #ffe0f0; /* Pink pastel */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge {
+            margin: 5px 0;
+        }
+
+        .extra-info {
+            background-color: #e6f7f9; /* Biru pastel */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .highlight {
+            background-color: #fff4b2; /* Kuning pastel */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .image-frame {
+            display: inline-block;
+            padding: 10px;
+            border: 4px dashed #6a0dad;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            margin: 40px 0 20px;
+            text-align: center;
+            color: #6a0dad;
         }
     </style>
 </head>
@@ -94,48 +158,40 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About Me
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Introduction</a></li>
+                            <li><a class="dropdown-item" href="#">Professional Experience</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Projects</a></li>
+                            <li><a class="dropdown-item" href="#">Soft Skills</a></li>
+                            <li><a class="dropdown-item" href="#">Hard Skills</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
+                        <a class="nav-link" href="#">Profile</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Experience
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Bendahara OSIS di SMA XYZ</a></li>
-                            <li><a class="dropdown-item" href="#">Anggota Tim Proyek di Universitas ABC</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Projects
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-                            <li><a class="dropdown-item" href="#">Aplikasi Web untuk Manajemen Tugas</a></li>
-                            <li><a class="dropdown-item" href="#">Kampanye Kesadaran Gender di Sekolah</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="skillsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Skills
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="skillsDropdown">
-                            <li><a class="dropdown-item" href="#">HTML, CSS, JavaScript</a></li>
-                            <li><a class="dropdown-item" href="#">Manajemen Proyek</a></li>
-                            <li><a class="dropdown-item" href="#">Komunikasi Efektif</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contact Me</a>
                     </li>
                 </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-outline-primary" type="submit">Sign-Up</button>
+                    <button class="btn btn-outline-success ml-2 mr-2" type="submit">Sign-In</button>
+                </form>
             </div>
         </div>
     </nav>
 
-    <div id="about" class="container my-5">
+    <div id="about" class="container my-5 about-section">
         <div class="row">
             <div class="col-lg-6 align-self-center text-center text-lg-start">
-                <h1 style="font-family: 'Permanent Marker';">🌻 About Me 🌻</h1>
+                <h1>🌻 About Me 🌻</h1>
                 <p class="mt-5">
-                    Informasi Pribadi <br>
+                    <h5>Informasi Pribadi</h5><br>
                     Nama: Dhaifina Raiqa Zahira <br>
                     Alamat: Jalan Perintis Kemerdekaan, Kota Binjai, 20744 <br>
                     Email: raiqazahira0202@gmail.com <br>
@@ -143,50 +199,136 @@
                     LinkedIn: <a href="https://www.linkedin.com/in/dhaifina-raiqa" target="_blank">Dhaifina Raiqa</a> <br>
                     GitHub: <a href="https://github.com/raiqazahira" target="_blank">raiqazahira</a>
                 </p>
+                <div class="extra-info">
+                    <h5>🎉 Fun Facts 🎉</h5>
+                    <div class="fun-facts">
+                       <ul>
+                          <li>Saya suka membaca baik novel, komik maupun buku nonfiksi.</li>
+                          <li>Saya senang menghabiskan waktu luang saya untuk menonton film</li>
+                          <li>Saya menyukai kucing walaupun tidak memeliharanya</li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <h5>🛠️ Tools 🛠️</h5>
+                    <ul>
+                        <li>MS Word</li>
+                        <li>MS PowerPoint</li>
+                        <li>MS Excel</li>
+                        <li>Canva</li>
+                        <li>CapCut</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block text-center">
-                <img src="raiqa.jpg" alt="Gambar Raiqa" width="450">
+                <div class="image-frame">
+                    <img src="raiqa.jpg" alt="Gambar Raiqa" width="450">
+                </div>
             </div>
         </div>
     </div>
 
     <div class="container my-5">
+      <h2 class="section-title">🎓 Education Background 🎓</h2>
+      <ul>
+          <li>
+              <strong>SMA Negeri 2 Binjai</strong> - <em>Matematika dan Ilmu Pengetahuan Alam</em> (2021 - 2024)
+              <p>Mendapatkan pendidikan dasar di bidang sains dan teknologi.</p>
+          </li>
+          <li>
+            <strong>Universitas Sumatera Utara</strong> - <em>S1 Teknologi Informasi</em> (2024-sekarang)
+            <p>Mempelajari dasar-dasar pengembangan perangkat lunak, algoritma, dan desain sistem.</p>
+          </li>
+      </ul>
+  </div>
+
+    <div class="container my-5">
+        <h2 class="section-title">🛠️ Hard Skills 🛠️</h2>
         <div class="row">
-            <div class="col-md-4" id="experience">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">🛠️ Experience</h5>
-                        <p class="card-text">1. Bendahara OSIS di SMA XYZ.</p>
-                        <p class="card-text">2. Anggota Tim Proyek di Universitas ABC.</p>
+                        <h5 class="card-title">Front-end Development</h5>
+                        <p class="card-text">HTML, CSS, JavaScript</p>
+                        <span class="badge bg-success text-dark">Beginner</span>
+                        <span class="badge bg-info text-dark">Intermediate</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" id="projects">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">💻 Projects</h5>
-                        <p class="card-text">1. Aplikasi Web untuk Manajemen Tugas.</p>
-                        <p class="card-text">2. Kampanye Kesadaran Gender di Sekolah.</p>
+                        <h5 class="card-title">Back-end Development</h5>
+                        <p class="card-text">Node.js, Express, MongoDB</p>
+                        <span class="badge bg-success text-light">Beginner</span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" id="skills">
+            <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">🌟 Skills</h5>
-                        <p class="card-text">1. HTML, CSS, JavaScript.</p>
-                        <p class="card-text">2. Manajemen Proyek.</p>
-                        <p class="card-text">3. Komunikasi Efektif.</p>
+                        <h5 class="card-title">Design</h5>
+                        <p class="card-text">Figma, Adobe XD</p>
+                        <span class="badge bg-danger text-light">Intermediate</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container my-5">
+      <h2 class="section-title">🌟 Soft Skills 🌟</h2>
+      <ul>
+          <li><h6 style="font-weight: bold;">Kemampuan Komunikasi yang Baik:</h6>Menunjukkan kemampuan untuk menyampaikan ide dengan jelas.</li>
+          <li><h6 style="font-weight: bold;">Kerjasama Tim yang Kuat:</h6>Menekankan pentingnya berkolaborasi dengan orang lain untuk mencapai tujuan bersama.</li>
+          <li><h6 style="font-weight: bold;">Kemampuan Manajemen Waktu:</h6>Menggambarkan kemampuan mengatur waktu dan prioritas.</li>
+          <li><h6 style="font-weight: bold;">Beradaptasi dengan Cepat:</h6>Menunjukkan fleksibilitas dan kemampuan untuk belajar hal baru.</li>
+          <li><h6 style="font-weight: bold;">Berpikir Kritis dan Problem Solving:</h6>Menyoroti kemampuan untuk menganalisis situasi dan menemukan solusi.</li>
+          <li><h6 style="font-weight: bold;">Kreativitas dalam Mendesain Konten:</h6>Menunjukkan inovasi dan kemampuan berpikir di luar kotak.</li>
+          <li><h6 style="font-weight: bold;">Ketahanan dalam Menghadapi Tantangan:</h6>Menekankan kemampuan untuk tetap tenang dan efektif dalam situasi sulit.</li>
+      </ul>
+  </div>
+
+    <div class="container my-5">
+        <h2 class="section-title">💼 Experience 💼</h2>
+        <ul>
+          <li>
+            <strong>Proyek Pengembangan Web Merchstore</strong> - <em>Proyek Pribadi</em> (Juli 2024)
+                - Mengembangkan Web Merchstore menggunakan HTML, CSS, dan JavaScript. <br>
+                - Menerapkan prinsip desain responsif untuk meningkatkan pengalaman pengguna. <br>
+                - Menggunakan Git untuk mengelola versi kode dan kolaborasi dengan teman.
+            </p>
+          </li>
+          <li>
+            <strong>Voluntir di Acara Sekolah</strong> - <em>SMA Negeri 1 Medan</em> (November 2024)
+            <p>
+                - Membantu dalam mengorganisir acara edukasi bagi anak-anak di daerah lokal. <br>
+                - Mengembangkan materi presentasi dan melakukan sesi pengajaran. <br>
+                - Meningkatkan keterampilan komunikasi dan kerja tim.
+            </p>
+          </li>
+        </ul>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="section-title">📁 Projects 📁</h2>
+        <ul>
+            <li>
+                <strong>Website MerchStore</strong> - <a href="https://raiqazahira.github.io/rai.s-website/Tugas3pw.html" target="_blank">Lihat Proyek</a>
+                <p>Website ini untuk menyalurkan kreativitas saya dan membangun brand sambil memberikan produk unik yang menarik bagi audiens saya.</p>
+            </li>
+        </ul>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Raiqa Zahira. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="https://www.linkedin.com/in/dhaifina-raiqa" target="_blank">
-                <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-            </a>
-            <a href="https://github.com/raiqazahira
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/in/dhaifina-raiqa" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://instagram.com/raiqazahira" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://github.com/raiqazahira" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+      <p>&copy; 2024 Raiqa Zahira. All Rights Reserved.</p>
+  </footer>  
+</body>
+
+</html>
